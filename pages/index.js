@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 
 import { useState, useEffect } from 'react'
 import { web3, contract, sharedMessage } from '../lib/web3'
@@ -9,7 +8,6 @@ import BuyButton from '../components/BuyButton'
 
 import Logo from '../public/logo.svg'
 import Social from '../public/logo.svg'
-
 
 export default function Home() {
   const [accounts, setAccounts] = useState([])
@@ -69,8 +67,7 @@ export default function Home() {
     
         const json = await r.json()
 
-        console.log(json.url)
-        // window.location.href = json.url
+        window.location.href = json.url
       } catch (e) {
         alert("incorrect download url")
       }
@@ -80,17 +77,23 @@ export default function Home() {
   }
 
   useEffect(() => {
-    window.ethereum
-        .request({ method: 'eth_accounts' })
-        .then(setAccounts)
-    window.ethereum
-        .on('accountsChanged', setAccounts)
+      if(window.ethereum) {
+        window.ethereum
+            .request({ method: 'eth_accounts' })
+            .then(setAccounts)
+        window.ethereum
+            .on('accountsChanged', setAccounts)
+      } else {
+        alert('You need to install a wallet!')
+      }
   }, [])
 
   useEffect(() => {
     // check access if we change accounts
-    checkAccess()
-    fetchCanBuy()
+    if(window.ethereum) {
+      checkAccess()
+      fetchCanBuy()
+    }
   }, [accounts])
 
   return (
@@ -98,7 +101,7 @@ export default function Home() {
       <div className="label">OA Records</div>
       <Box />
       <header className="App-header">
-        <Image src={Logo} className="logo" />
+        <img src='https://prism-one.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Flogo.7543c31f9b5458c786301c1334d8b921.svg&w=96&q=75' className="logo" />
 
         <h1>The debut album from Prism</h1>
         <h2>{totalSales} / 100 sold</h2>
