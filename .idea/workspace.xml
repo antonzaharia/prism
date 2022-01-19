@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4aa8f6f9-d1ec-42de-9905-d178a36cd410" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/Migrations.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/Migrations.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/PrismSale.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/PrismSale.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/PrismSale.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/PrismSale.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/prism_sale.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/prism_sale.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +37,8 @@
       <option name="presentableId" value="Default" />
       <updated>1641835037766</updated>
       <workItem from="1641835039037" duration="6431000" />
-      <workItem from="1641919579343" duration="1999000" />
+      <workItem from="1641919579343" duration="2037000" />
+      <workItem from="1642524582904" duration="2856000" />
     </task>
     <servers />
   </component>
